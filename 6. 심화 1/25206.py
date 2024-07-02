@@ -9,7 +9,7 @@ scores = {
     'C0': 2.0,
     'D+': 1.5,
     'D0': 1.0,
-    'F': 0.0
+    'F': 0.0,
 }
 
 sum_grade_score = 0
@@ -20,9 +20,8 @@ for i in range(20):
     grade_dic[subject] = {'Grade': grade, 'Score': float(score)}
 
 for key, value in grade_dic.items():
-    sum_score += value['Score']
-    
     if not value['Grade'] == 'P':
-        sum_grade_score += value['Score'] * scores[value['Grade']]
+        sum_score += value['Score']
+        sum_grade_score += value['Score'] * scores[value['Grade']] 
 
-print(sum_grade_score/sum_score)
+print(round(sum_grade_score/sum_score, 6))
