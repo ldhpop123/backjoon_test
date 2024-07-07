@@ -7,4 +7,3 @@ for x, y in box_index_li:
             if [index_x, index_y] not in result:
                 result.append([index_x, index_y])
 print(len(result))
-print(result)
