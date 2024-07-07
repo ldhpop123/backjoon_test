@@ -1,7 +1,10 @@
 box_index_li = [[int(index) for index in input().split()] for i in range(int(input()))]
-result = 0
+result = []
 
 for x, y in box_index_li:
-    result += 100 if 
-
-
+    for index_x in range(x, x+10):
+        for index_y in range(y, y+10):
+            if [index_x, index_y] not in result:
+                result.append([index_x, index_y])
+print(len(result))
+print(result)
