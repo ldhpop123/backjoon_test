@@ -1,9 +1,25 @@
 string = input()
+<<<<<<< HEAD
+<<<<<<< HEAD
 list_string = []
 croatia = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+=======
+>>>>>>> 07029c4efeb6747a0fdb1d4d75d8d7f6f9d5c7e1
+=======
+>>>>>>> 07029c4efeb6747a0fdb1d4d75d8d7f6f9d5c7e1
+croatia = ['dz=', 'c=', 'c-', 'd-', 'lj', 'nj', 's=', 'z=']
 count = 0
 
+for croa in croatia:
+    while croa in string:
+        string = string[:string.index(croa)] + ' ' + string[string.index(croa)+len(croa):]
+        count += 1
+for element in string:
+    if (not element == ' ' ) and (element.isalpha()):
+        count += 1
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 list_string = list(string)
 
 while True:
@@ -31,6 +47,14 @@ while True:
         string += i
     for space in list_string:
         if space != ' ':
+if len(string) <= 100:
+    for repeat in range(len(string)):
+        for croa in croatia:
+            if croa in string:
+                string = string[:string.index(croa)] + ' ' + string[string.index(croa)+len(croa):]
+                count += 1
+    for element in string:
+        if (not element == ' ') and (element.isalpha()):
             count += 1
     print(count, '결과')
     print(list_string)
@@ -39,3 +63,10 @@ while True:
 
 
 
+    print(count)
+=======
+print(count)
+>>>>>>> 07029c4efeb6747a0fdb1d4d75d8d7f6f9d5c7e1
+=======
+print(count)
+>>>>>>> 07029c4efeb6747a0fdb1d4d75d8d7f6f9d5c7e1
