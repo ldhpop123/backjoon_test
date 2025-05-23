@@ -2,8 +2,8 @@
 
 int main() {
     char str[101];
-    while(scanf("%s", str)!= EOF) {
-        printf("%s\n", str);
+    while(fgets(str, sizeof(str), stdin)) {
+        printf("%s", str);
     }
 
     return 0;

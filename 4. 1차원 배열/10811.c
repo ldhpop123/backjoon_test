@@ -1,32 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    int N, M;
-    scanf("%d %d", &N, &M);
-    int bako[N+1];
+    int size, repeat;
+    scanf("%d %d", &size, &repeat);
+    int li[size+1];
 
-    bako[0] = 0;
-    for (int i = 1; i <= N; i++) {
-        bako[i] = i;
+    for (int i = 0; i <= size; i++) {
+        li[i] = i;
     }
 
-    for (int i = 0; i < M; i++) {
-        int X, Y;
-        scanf("%d %d", &X, &Y);
-        for (int i = X; i <= Y; i++) {
-            int temp = bako[i];
-            bako[i] = bako[X];
-            bako[X] = temp;
-            X--;
-            for (int i = 1; i <= N; i++) {
-                printf("%d ", bako[i]);
-            }
-            printf("\n");
+    for (int i = 0; i < repeat; i++) {
+        int start, end;
+        scanf("%d %d", &start, &end);
+        for(int i = start; i <= end; i++) {
+            int temp = li[i];
+            li[i] = li[end];
+            li[end] = temp;
+            end--;
         }
     }
 
-    for (int i = 0; i < N; i++) {
-        printf("%d ", bako[i]);
+    for (int i = 1; i <= size; i++) {
+        printf("%d ", li[i]);
     }
 
     return 0;
